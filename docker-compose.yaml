@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgresdb:
+    image: postgres
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DATABASE
+    ports:
+      - $POSTGRES_PORT:$POSTGRES_PORT
+    volumes:
+      - db:/var/lib/postgres
+  app:
+    depends_on:
+      - postgresdb
+    build:
+        dockerfile: Dockerfile
+        context: .
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $PORT:$PORT
+    environment:
+      - POSTGRES_HOST=postgresdb
+volumes: 
+  db:

@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "f755f968-d69c-496c-ad7e-5765541d7e8f",
+		"name": "grocery-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Single Role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/role/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"role",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\":\"keshav\",\n    \"lastname\":\"vyavahare\",\n    \"email\":\"kvyavahare52@gmail.com\",\n    \"mobilenumber\":\"9834712342\",\n    \"password\":\"test@1234\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Role To User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":1,\n    \"role_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/role/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"role",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Sugar\",\n    \"stock\": 50,\n    \"price\":40,\n    \"unit\":\"kg\",\n    \"min_level\":10,\n    \"danger_level\":\"15\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/item/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"item",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Role from User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/user/1/remove-role/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"user",
+						"1",
+						"remove-role",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Role",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/role/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"role",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,8 @@
+require("@babel/register");
+require('dotenv').config();
+const path = require('path');
+
+module.exports = {
+  config: path.resolve('data', 'dbconfig.js'),
+  'seeders-path': path.resolve('data', 'seeders'),
+};
